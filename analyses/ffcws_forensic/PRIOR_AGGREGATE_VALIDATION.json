@@ -1,0 +1,30 @@
+{
+  "source": "Prior user-provided aggregate FFCWS files only; no respondent-level reanalysis",
+  "checks": {
+    "six_categories_weight_sum_one": true,
+    "six_categories_count_sum_938": true,
+    "reconstruct_vaginal_lower_from_components": true,
+    "reconstruct_vaginal_upper_from_components": true,
+    "confirmed_after_is_less_than_old_49_92_scenario": true,
+    "503_debut_ages_and_514_vaginal_yes": true
+  },
+  "all_pass": true,
+  "verified_values": {
+    "target_n": 938,
+    "adult_vaginal_yes_n": 514,
+    "debut_age_valid_n": 503,
+    "definitely_earlier_n": 49,
+    "same_age_n": 52,
+    "definitely_later_n": 402,
+    "adult_vaginal_yes_no_debut_n": 11,
+    "adult_status_missing_n": 241,
+    "adult_known_vaginal_no_n": 183,
+    "pre_weighted_share": 0.03944196569,
+    "same_weighted_share": 0.0412259511,
+    "strict_definite_after_weighted_share": 0.4852055255,
+    "undated_yes_weighted_share": 0.01398401436,
+    "adult_status_missing_weighted_share": 0.22994032230000006,
+    "adult_vaginal_no_weighted_share": 0.19020222104999995,
+    "classification_upper_all_unknown_later": 0.77035581326
+  }
+}

@@ -1,0 +1,20 @@
+Synthetic tests executed with Python 3.13.5, numpy 2.3.5, pandas 2.2.3, scikit-learn 1.8.0.
+Synthetic/nonhistorical mode: no historical validation.
+Completed 5/33 jackknife replicates
+Completed 10/33 jackknife replicates
+Completed 15/33 jackknife replicates
+Completed 20/33 jackknife replicates
+Completed 25/33 jackknife replicates
+Completed 30/33 jackknife replicates
+Completed 33/33 jackknife replicates
+Success. Aggregate-only results saved to: <temporary synthetic output>/results
+Synthetic/nonhistorical mode: no historical validation.
+Completed 5/33 jackknife replicates
+Completed 10/33 jackknife replicates
+Completed 15/33 jackknife replicates
+Completed 20/33 jackknife replicates
+Completed 25/33 jackknife replicates
+Completed 30/33 jackknife replicates
+Completed 33/33 jackknife replicates
+Success. Aggregate-only results saved to: <temporary synthetic output>/csv_results
+PASS: routing, exact weight arithmetic, paired jackknife, historical rejection, Stata and CSV pipeline, aggregate outputs.

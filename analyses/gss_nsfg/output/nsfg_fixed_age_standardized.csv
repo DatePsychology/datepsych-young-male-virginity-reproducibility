@@ -1,0 +1,6 @@
+wave,group,age_reference,estimate_pct,SE_pp,ci95_low_pct,ci95_high_pct,design_df
+2011_2013,heterosexual men 18–29,NSFG 2017-2019 heterosexual men 18–29,12.727598,1.003344,10.716015,14.739182,54
+2013_2015,heterosexual men 18–29,NSFG 2017-2019 heterosexual men 18–29,11.355836,0.964391,9.422349,13.289323,54
+2015_2017,heterosexual men 18–29,NSFG 2017-2019 heterosexual men 18–29,13.798045,1.316686,11.158250,16.437841,54
+2017_2019,heterosexual men 18–29,NSFG 2017-2019 heterosexual men 18–29,15.265424,1.350787,12.557259,17.973589,54
+2022_2023,heterosexual men 18–29,NSFG 2017-2019 heterosexual men 18–29,27.104257,1.619505,23.864764,30.343750,60

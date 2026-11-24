@@ -1,0 +1,35 @@
+from pathlib import Path
+import pandas as pd, numpy as np, matplotlib.pyplot as plt
+out=Path(__file__).resolve().parent/'output';read=lambda x:pd.read_csv(out/x)
+p=read('yrbs_prevalence_all.csv');s=read('yrbs_standardized.csv');m=read('yrbs_missingness_sensitivity.csv');n=read('nsfg_age_15_19_comparator.csv')
+# Trend with confidence bars
+x=p[p.estimand=='boys_all'].copy();x.year=x.year.astype(int)
+fig,ax=plt.subplots(figsize=(10,5.2));ax.errorbar(x.year,x.p*100,yerr=np.vstack(((x.p-x.lo)*100,(x.hi-x.p)*100)),marker='o',linestyle='-',capsize=4,linewidth=2)
+ax.set(xlabel='National YRBS year',ylabel='Male high-school students reporting ever having had intercourse (%)',title='U.S. adolescent boys: lifetime intercourse, 2011–2025',xticks=x.year)
+ax.set_ylim(20,58);ax.grid(alpha=.2)
+fig.text(.1,.01,'Survey-weighted point estimates; 95% stratified-PSU Taylor-linearization confidence intervals. Valid responders only.',fontsize=9)
+fig.tight_layout(rect=(0,.045,1,1));fig.savefig(out/'yrbs_male_trend_ci.png',dpi=180);plt.close(fig)
+# Age adjustment
+z=s[s.estimand=='age_2019'].copy();fig,ax=plt.subplots(figsize=(10,5.1))
+ax.plot(x.year,x.p*100,marker='o',label='Observed',linewidth=2)
+ax.plot(z.year,z.p*100,marker='s',label='Age standardized to 2019',linewidth=2)
+ax.set(xlabel='National YRBS year',ylabel='Ever had intercourse (%)',title='Effect of changing respondent age composition',xticks=x.year)
+ax.grid(alpha=.2);ax.legend();fig.text(.1,.01,'Age 14+ for standardized series; reference distribution = observed male respondents in 2019.',fontsize=9)
+fig.tight_layout(rect=(0,.045,1,1));fig.savefig(out/'age_standardization.png',dpi=180);plt.close(fig)
+# Missingness bounds
+z=m[m.population=='boys_all'].copy();fig,ax=plt.subplots(figsize=(10,5.2))
+ax.fill_between(z.year,z.min_bound*100,z.max_bound*100,alpha=.22,label='Item-missingness worst-case bounds')
+ax.plot(z.year,z.complete_case*100,marker='o',label='Complete case')
+for _,r in z.iterrows():ax.text(r.year,r.max_bound*100+1.3,f'{r.missing_weighted*100:.0f}% missing',ha='center',fontsize=8)
+ax.set(xlabel='Year',ylabel='Ever had intercourse (%)',title='Impact of unanswered lifetime-intercourse question',xticks=z.year,ylim=(20,60))
+ax.grid(alpha=.2);ax.legend(loc='lower left');fig.text(.09,.01,'Bounds address item nonresponse among surveyed boys; NOT absent schools/students or mode biases.',fontsize=9)
+fig.tight_layout(rect=(0,.045,1,1));fig.savefig(out/'item_missingness_bounds.png',dpi=180);plt.close(fig)
+# YRBS NSFG comparison ages15–17 (different constructs)
+y=p[p.estimand=='15-17'];k=n[n.age_group=='15-17'].copy();k['midyear']=[2012,2014,2016,2018,2022.5]
+fig,ax=plt.subplots(figsize=(10,5.4))
+ax.errorbar(y.year,y.p*100,yerr=np.vstack(((y.p-y.lo)*100,(y.hi-y.p)*100)),marker='o',capsize=3,label='YRBS: ever intercourse (school-based)')
+ax.errorbar(k.midyear,k.sexever_vaginal_female,yerr=np.vstack((k.sexever_vaginal_female-k.CI_low,k.CI_high-k.sexever_vaginal_female)),marker='s',capsize=3,label='NSFG: ever vaginal intercourse with female (household-based)')
+ax.set(xlabel='Survey year or NSFG wave midpoint',ylabel='Men aged 15–17 reporting ever intercourse (%)',title='Two independent surveys: direction of trend, not identical outcome',xticks=[2011,2013,2015,2017,2019,2021,2023,2025],ylim=(10,58))
+ax.legend(fontsize=9);ax.grid(alpha=.2)
+fig.text(.09,.01,'Different survey populations, question wording and sexual-behavior definitions; the levels are not interchangeable.',fontsize=9)
+fig.tight_layout(rect=(0,.045,1,1));fig.savefig(out/'yrbs_nsfg_15_17_comparison.png',dpi=180);plt.close(fig)

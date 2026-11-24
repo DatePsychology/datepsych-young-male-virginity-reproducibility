@@ -1,0 +1,6 @@
+source,measure,limitation
+GSS NUMWOMEN = 0,No female sex partners since turning 18,Lifetime absence of sexual experience
+GSS PARTNERS = 0,No sex partners in the previous 12 months,Lifetime virginity
+NSFG male HADSEX = 2,No lifetime vaginal intercourse with a female,No oral/anal sex or same-sex experience
+National YRBS,Whether a school-enrolled adolescent has ever had intercourse,"A perfectly equivalent vaginal-intercourse measure, or behavior of out-of-school youths"
+FFCWS Year 22,"Ever had sex and a separate vaginal-intercourse item",Identical wording to the adolescent question or the sex of the vaginal partner
