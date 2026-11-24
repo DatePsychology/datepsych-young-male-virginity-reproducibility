@@ -52,7 +52,7 @@ The NSFG mode audit was recovered from the original printed source, with portabl
 
 ## Sources
 
-See [SOURCE_AUDIT.md](SOURCE_AUDIT.md) and the reports for the official survey sources, question definitions, methods and limitations. Companion publication: [Revisiting Datepsych](https://datepsych.substack.com/). The specific article URL can be added after publication.
+See [SOURCE_AUDIT.md](SOURCE_AUDIT.md) and the reports for the official survey sources, question definitions, methods and limitations. Companion publication: [Revisiting Datepsych](https://datepsych.substack.com/).
 
 ## Redistribution
 
