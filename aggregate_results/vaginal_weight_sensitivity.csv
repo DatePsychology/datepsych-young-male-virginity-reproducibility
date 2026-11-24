@@ -1,0 +1,14 @@
+specification,comparison_baseline,estimate_pct,se_pp,ci95_low_pct,ci95_high_pct,delta_vs_baseline_pp,delta_ci95_low_pp,delta_ci95_high_pp,delta_vs_cc_pp,delta_vs_cc_ci95_low_pp,delta_vs_cc_ci95_high_pp,replicates_valid,description
+cc_original,cc_original,75.30,3.78,67.89,82.71,0.00,0.00,0.00,0.00,0.00,0.00,33,Unadjusted Year-15 survey weights
+cc_survey_cap_p99,cc_original,75.33,3.68,68.11,82.55,0.03,-0.87,0.94,0.03,-0.87,0.94,33,Cap original survey weights at p99
+cc_survey_cap_p95,cc_original,75.48,3.12,69.35,81.60,0.18,-3.25,3.60,0.18,-3.25,3.60,33,Cap original survey weights at p95
+ipw_original,ipw_original,74.96,3.56,67.98,81.94,0.00,0.00,0.00,-0.34,-2.38,1.70,33,Original survey weight / clipped response probability
+ipw_combined_cap_p99,ipw_original,76.22,3.30,69.76,82.69,1.26,-0.40,2.93,0.92,-1.21,3.06,33,Cap combined weights at p99
+ipw_combined_cap_p95,ipw_original,76.45,2.82,70.93,81.97,1.49,-1.97,4.94,1.15,-2.75,5.05,33,Cap combined weights at p95
+ipw_response_cap_p99,ipw_original,74.93,3.60,67.87,81.98,-0.03,-0.30,0.23,-0.37,-2.40,1.65,33,Cap inverse response factors at p99 only
+ipw_response_cap_p95,ipw_original,74.55,3.67,67.36,81.74,-0.41,-1.09,0.27,-0.75,-2.87,1.37,33,Cap inverse response factors at p95 only
+ipw_survey_cap_p99,ipw_original,75.04,3.47,68.23,81.84,0.08,-1.05,1.20,-0.26,-2.81,2.28,33,"Cap original survey weights at p99 only, keep original response fit"
+ipw_survey_cap_p95,ipw_original,76.03,2.87,70.40,81.66,1.07,-2.18,4.33,0.73,-3.41,4.88,33,"Cap original survey weights at p95 only, keep original response fit"
+ipw_drop_top_p99,ipw_original,78.56,3.87,70.97,86.15,3.60,-3.31,10.51,3.26,-4.03,10.54,33,Exclude combined weights strictly above p99
+ipw_drop_top_p95,ipw_original,77.23,4.27,68.87,85.59,2.27,-8.73,13.27,1.93,-9.41,13.27,33,Exclude combined weights strictly above p95
+year22_original_cc,not_paired_different_weight_frame,74.26,3.97,66.49,82.04,,,,,,,33,Year-22 weighted observed cases; not paired with Year-15 replicates

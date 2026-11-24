@@ -1,0 +1,45 @@
+{
+  "version": "1.0.0",
+  "historical_strict_mode": true,
+  "historical_checks": {
+    "target_n_938": true,
+    "observed_n_697": true,
+    "yes_n_514": true,
+    "year22_observed_n_697": true,
+    "cc_matches_75_30_pct": true,
+    "ipw_matches_74_96_pct": true,
+    "year22_matches_74_26_pct": true,
+    "cc_historical_se": true,
+    "ipw_historical_se": true,
+    "year22_historical_se": true,
+    "year22_eligible_n_734": true,
+    "input_n_4898": true
+  },
+  "input_record_count": 4898,
+  "target_n": 938,
+  "observed_n": 697,
+  "positive_n": 514,
+  "year22_observed_n": 697,
+  "predictor_variables": [
+    "cm1age",
+    "cm1ethrace",
+    "cm1edu",
+    "cm1relf",
+    "cm1povca"
+  ],
+  "predictor_columns": 22,
+  "response_definition": "finite harmonized Year-22 vaginal outcome",
+  "weight_replicates": 33,
+  "variance": "sum squared deviations from full sample; paired differences use same replicates",
+  "propensity_model": "normalized-weight L2 logistic C=1, StandardScaler, probability clip 0.02\u20130.98; refit per replicate",
+  "cap_rule": "unweighted linear quantile of positive-weight observed cases, recalculated within each replicate; delete strictly above cutoff",
+  "data_scope": "original Year-15 positive national-weight male adolescent lifetime-no domain; Year-22 separate sensitivity frame",
+  "independent_reference_checks": "archived CC and IPW point estimates and replicate SEs agree",
+  "software": {
+    "python": "3.12.10",
+    "numpy": "2.5.5",
+    "pandas": "2.3.3",
+    "sklearn": "1.9.1"
+  },
+  "limitations": "Sensitivity diagnostics, not corrected population estimates. Does not resolve MNAR, reporting errors, or cohort transport. Wald intervals, adaptive thresholds are exploratory. No per-replicate or per-person results exported."
+}

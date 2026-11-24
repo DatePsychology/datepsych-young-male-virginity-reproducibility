@@ -1,0 +1,13 @@
+# Final FFCWS vaginal-outcome weight-influence audit
+
+The authorized data user executed version 1.0.0 locally. The original 938-person Year-15 domain, 697 observed outcomes, 514 positive outcomes, three historical weighted estimates and their standard errors reproduced. All 12 historical checks passed and all 33 jackknife replicates were valid. Independent review of the returned rounded aggregate outputs passed 72 additional consistency checks; this is not an independent respondent-level or replicate-vector rerun.
+
+## Results
+
+The original Year-15 complete-case estimate is 75.30% (95% CI 67.89–82.71), the outcome-specific IPW estimate 74.96% (67.98–81.94), and the separate Year-22-weighted estimate 74.26% (66.49–82.04). Capping the original survey weights changes the complete-case point estimate by +0.03 or +0.18 percentage points (p99/p95). Across eight capping specifications, changes from the corresponding untrimmed baselines range from −0.41 to +1.49 points. The maximum capping estimate is 76.45%, the minimum 74.55%. Combined-weight deletion above p99 gives 78.56% (+3.60 points, paired 95% CI −3.31 to +10.51); deletion above p95 gives 77.23% (+2.27, −8.73 to +13.27). Deletion changes the observed weighted sample, not merely the weights. All paired difference intervals include zero; this does not demonstrate equivalence. The Year-22 frame is not paired with the Year-15 replicates.
+
+Kish unequal-weight effective sample sizes are 132.87 (Year-15 complete cases) and 146.93 (IPW) out of 697 observed cases; the highest-weighted 1% account for 13.62% and 12.65% of the weight, and the highest 5% account for 42.43% and 39.42%. Kish ESS reflects weight dispersion alone, not the full complex survey design.
+
+## Interpretation
+
+Under our pre-results practical benchmarks, capping point estimates show reassuring stability (<1.5 points); deletion shifts of 2.27–3.60 points are meaningful but imprecise. The paired confidence intervals, especially deletion, permit materially larger shifts. The results support substantial reported experience among followed respondents, not a precise confirmed initiation rate or equivalence across estimators. No specification is a demonstrated bias correction; unobserved selection, recall conflicts and cohort transport remain unresolved. The response model is refit and quantile cutoffs recalculated within each replicate; the intervals are exploratory Wald intervals. Full specifications, paired contrasts, diagnostic weights and software metadata are in the three original aggregate files. No individual records, respondent-level weights or predictions are supplied.

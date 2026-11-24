@@ -1,0 +1,11 @@
+test_chronology (test_reconstruction.AggregateChecks.test_chronology) ... ok
+test_figures (test_reconstruction.AggregateChecks.test_figures) ... ok
+test_thresholds (test_reconstruction.AggregateChecks.test_thresholds) ... ok
+test_vaginal_audit (test_reconstruction.AggregateChecks.test_vaginal_audit) ... ok
+test_weight_concentration (test_reconstruction.AggregateChecks.test_weight_concentration) ... ok
+test_yrbs (test_reconstruction.AggregateChecks.test_yrbs) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.001s
+
+OK
